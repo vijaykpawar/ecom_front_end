@@ -1,0 +1,56 @@
+
+<h2 style="text-align: center"><b>Register</b></h2>
+
+<!-- firstName:firstName,
+      lastName:lastName,
+      email: email,
+      phone: phone,
+      userName:userName,
+      password: password -->
+
+<div class="row" style="margin-top: 20px;">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+      <div class="form">
+        <div class="form-group">
+          <label for="">First Name</label>
+          <input [(ngModel)]="firstName" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">Last Name</label>
+          <input [(ngModel)]="lastName" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">Email</label>
+          <input [(ngModel)]="email" type="email" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">Phone</label>
+          <input [(ngModel)]="phone" type="tel" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">User Name</label>
+          <input [(ngModel)]="username" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">Password</label>
+          <input [(ngModel)]="password" type="password" class="form-control">
+        </div>
+        <!-- <div class="form-group">
+          <label for="">Confirm Password</label>
+          <input [(ngModel)]="confirmPassword" type="password" class="form-control">
+        </div> -->
+        <div class="form-group">
+          <button (click)="onregister()" class="btn btn-success">Register</button>
+          <button (click)="onCancel()" class="btn btn-danger pull-right" style="margin-left: 5px">Cancel</button>
+        </div>
+      </div>
+
+  </div>
+  <div class="col-md-4"></div>
+</div>

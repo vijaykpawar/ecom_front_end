@@ -1,0 +1,25 @@
+<div class="container p-5 border bg-light">
+  <h2>Products List</h2>
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let p of products;">
+        <td>{{p.name}}</td>
+        <td>{{p.desc}}</td>
+        <td>{{p.quantity}}</td>
+        <td>{{p.price}}</td>
+      </tr>
+    
+    </tbody>
+  </table>
+</div>
+

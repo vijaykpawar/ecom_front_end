@@ -1,0 +1,41 @@
+
+
+                        <!-- LOG IN PAGE -->
+<div class="container">
+    <div class="row pt-sm-5">
+      <div class="col-sm">
+        
+      </div>
+      
+      <div class="col-sm">
+          <h3>Login  {{isLoginPage}}</h3>
+          
+              <div class="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" [(ngModel)]="user.username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" [(ngModel)]="user.password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+              </div>
+              <button type="submit" (click)="login()" class="btn btn-primary">SignIn</button>
+    
+              <div class="pt-sm-2">
+                  <!-- <button (click)="register()" class="btn btn-success pull-right" style="margin-left: 5px">Sign Up</button> -->
+                  
+                  <a routerLink="/register"><a>Not registered?</a> register</a>
+              </div>
+            
+      </div>
+
+      <div class="col-sm">
+
+      </div>
+    </div>
+  </div>
+
+  

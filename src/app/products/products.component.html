@@ -1,0 +1,83 @@
+
+<div class="container" >
+    <h3>Add Product</h3>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <strong><label for="inputEmail4">Name</label></strong>
+        <input type="text" [(ngModel)]="product.name" class="form-control" id="exampleFormControlInput1" >
+        
+        <strong><label for="inputEmail4">Short Description</label></strong>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="Short description">
+      </div>
+      <div class="form-group col-md-6">
+       <strong> <label for="exampleFormControlTextarea1">Detail description</label></strong>
+        <textarea [(ngModel)]="product.desc" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+      </div>
+    </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+            <strong><label for="inputState">Category</label></strong>
+            <select class="form-control" [(ngModel)]="product.categoryId">
+
+                <option value="0">Select Category</option>
+                <option *ngFor="let c of category" [ngValue]="c.categoryId">{{c.name}}</option>
+              </select>
+            
+
+        </div>
+        <div class="form-group col-md-6">
+           <strong> <label for="inputState">Sub Category</label> </strong>
+           <select class="form-control" [(ngModel)]="product.subCategoryId">
+              <option value="0">Select Sub Category</option>
+              <option *ngFor="let c of subCategory" [ngValue]="c.subCategoryId">{{c.name}}</option>
+            </select> 
+        </div>
+      </div>
+
+      
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <strong><label>Select Quantity</label> </strong>
+            <input type="number" [(ngModel)]="product.quantity" class="form-control" value="0" min="0" max="500000" step="1"/>
+        </div>
+        <div class="form-group col-md-4">
+           <strong> <label for="exampleFormControlInput1">Price</label></strong>
+            <input type="number" [(ngModel)]="product.price" class="form-control" id="exampleFormControlInput1" >
+        </div>
+        <div class="form-group col-md-4">
+            <strong><label for="exampleFormControlInput1">Discount %</label></strong>
+            <input type="number"  class="form-control" id="exampleFormControlInput1"  value="0" min="0" max="100" step="1" >
+        </div>
+        
+      </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <strong><label for="exampleFormControlFile1">Front View Image</label></strong>
+        <input type="file" class="form-control-file" #fileInput1 (change)="onFileSelected( fileInput1.files,1)">
+      </div>
+      <div class="form-group col-md-3">
+        <strong><label for="exampleFormControlFile1">Right View Image</label></strong>
+              <input type="file" class="form-control-file" #fileInput2 (change)="onFileSelected( fileInput2.files,2)">
+      </div>
+      <div class="form-group col-md-3">
+        <strong><label for="exampleFormControlFile1">Left View Image</label></strong>
+              <input type="file" class="form-control-file" #fileInput3 (change)="onFileSelected( fileInput3.files,3)">
+      </div>
+      <div class="form-group col-md-3">
+        <strong><label for="exampleFormControlFile1">Back View Image</label></strong>
+              <input type="file" class="form-control-file" #fileInput4 (change)="onFileSelected( fileInput4.files,4)">
+      </div>
+      
+    </div>
+    
+    <div class="form-row">
+    <button type="submit"  (click)="saveProduct(product)"  class="btn btn-primary">Create Product</button>
+    </div>
+</div>
+
+
+  
